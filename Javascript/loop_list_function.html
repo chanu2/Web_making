@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+    <title>web-2</title>
+    <mata charset="utf-8">
+    <script>
+        function nightdayhandle(self) {                 // 웹 야간모드와 주간모드를 선택하는 함수
+            var target = document.querySelector('body');    //모든 body태크를 선택
+            if (self.value ==='night') {            
+                target.style.backgroundColor='black';       //javascript로 색구현 
+                target.style.color='white';
+                self.value='day';                          // 야간모드일때 버튼을 주간모드로 바꾸어줌              
+                var alist=document.querySelectorAll('a');   // 모든 a 태그를 선택한후 리스트 형태로 변수에 저장 
+                var i=0;
+                while(i<alist.length){
+                    alist[i].style.color='powderblue';     //  while문을 통해서 a태그들의 색을 변환 
+                    i=i+1;
+                    } 
+            }
+            else{
+                target.style.backgroundColor='white'; 
+                target.style.color='black';
+                self.value='night';
+                var alist=document.querySelectorAll('a');     // 주간모드 작동 코드
+                var i=0;
+                while(i<alist.length){
+                    alist[i].style.color='blue';  
+                    i=i+1;
+                    }  
+                }
+        }
+    </script>
+</head>
+<body>
+    <h1><storng>SON</storng></h1>
+    <input  type="button" value="night" onclick="  
+    nightdayhandle(this)  ">    //this는 input에 있는 속성들을 나타내며 간단하게 사용할 수 있다.
+     
+    <h1><a href="https://vi.wikipedia.org/wiki/Son_Heung-min">1.sony</a></h1>
+    <h1><a href="https://www.koreatimes.co.kr/www/art/2022/04/398_265583.html">2.girls_day_mina</a></h1>  
+    <h1><a href="https://www.donga.com/en/article/all/20211020/2994997/1">3.son_father</a></h1>
+    <script>
+        var data=["chan","jaenwen","jin"];  
+    </script>
+    <script>
+        document.write(data[0])    // document.write() 출력해주는 코드
+        document.write(data[1])      
+    </script>
+    <script>
+        data.push('drur')    // 리스트 추가 코드
+        data.push('max')
+    </script>
+
+    <ul>
+    <script>
+        var se=['chan','jun','gun','se','hun'];
+
+        i=0;
+        while(se.length>i){
+        
+            document.write('<li>'+se[i]+'</li>');      // while문 연습코드
+            i=i+1;
+        }
+    </script>
+    </ul>
+
+
+
+
+    <p>
+        With its revolutionary retractable pitch, enormous LED screens, scientif
+        ically calibrated acoustics and "bottoms-up" beer-pouring 
+        system, Tottenham Hotspur's giant 62,062-seater stadium in north London is the most ultra-modern football venue in the world.
+
+        Fittingly, it is also home to one of the world's most futuristi
+        c footballers.
+
+        Versatile, lightning-quick, two-footed and lethal in front of g
+        oal, Heung-Min Son is the paradigm of the 21st-century player. A footballer so industrious, so efficient and so finely tuned that you could be forgiven for wondering if he had been machine-engineered.
+
+        There is no superfluity with Son—no pointless tricks, no showy to
+        uches, no playing to the gallery. He has only one trick—the stepover—and he only ever deploys it to burst past befuddled defenders on his way to goal. The 26-year-old South Korean plays as if he only ever has five seconds to influence the game, which has helped turn him into one of the most dangerous attacking players in Europe.
+    </p>
+
+   
+    
+</body>
+</html>
